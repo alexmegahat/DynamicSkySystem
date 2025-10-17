@@ -216,10 +216,10 @@ protected:
 	//-----------------
 	//2D Clouds
 	//-----------------
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (Category = "04 - Cloud Settings", ClampMin = 0.f, EditCondition = "CloudsVisualisationType == ECloudsVisualisationType::TwoDimensionalClouds", EditConditionHides = "true"), DisplayName = "2D Clouds Material")
-	UMaterialInstance* TwoDimensionalCloudsMaterial;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (Category = "04 - Cloud Settings", EditCondition = "CloudsVisualisationType == ECloudsVisualisationType::TwoDimensionalClouds", EditConditionHides = "true"), DisplayName = "2D Clouds Texture")
+	UTexture2D* TwoDimensionalCloudsTexture;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (Category = "04 - Cloud Settings", ClampMin = 0.f, EditCondition = "CloudsVisualisationType == ECloudsVisualisationType::TwoDimensionalClouds", EditConditionHides = "true"), DisplayName = "2D Clouds Panning Speed")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (Category = "04 - Cloud Settings", EditCondition = "CloudsVisualisationType == ECloudsVisualisationType::TwoDimensionalClouds", EditConditionHides = "true"), DisplayName = "2D Clouds Panning Speed")
 	float TwoDimensionalCloudsPanningSpeed = 1.f;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (Category = "04 - Cloud Settings", ClampMin = 0.f, EditCondition = "CloudsVisualisationType == ECloudsVisualisationType::TwoDimensionalClouds", EditConditionHides = "true"), DisplayName = "2D Clouds Tiling")
