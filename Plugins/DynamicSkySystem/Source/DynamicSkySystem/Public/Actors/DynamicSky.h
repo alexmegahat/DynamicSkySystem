@@ -244,6 +244,12 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (Category = "04 - Cloud Settings", EditCondition = "CloudsVisualisationType == ECloudsVisualisationType::VolumetricClouds", EditConditionHides = "true"), DisplayName = "Should Volumetric Clouds Cast Shadow")
 	bool bShouldVolumetricCloudsCastShadow = true;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (Category = "04 - Cloud Settings", EditCondition = "CloudsVisualisationType == ECloudsVisualisationType::VolumetricClouds", EditConditionHides = "true"), DisplayName = "Volumetric Clouds Day Color")
+	FLinearColor VolumetricCloudsDayColorTint = FLinearColor(1.f, 1.f, 1.f, 1.f);
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (Category = "04 - Cloud Settings", EditCondition = "CloudsVisualisationType == ECloudsVisualisationType::VolumetricClouds", EditConditionHides = "true"), DisplayName = "Volumetric Clouds Night Color")
+	FLinearColor VolumetricCloudsNightColorTint = FLinearColor(1.f, 1.f, 1.f, 0.2f);
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (Category = "04 - Cloud Settings", ClampMin = 0.f, EditCondition = "CloudsVisualisationType == ECloudsVisualisationType::VolumetricClouds", EditConditionHides = "true"), DisplayName = "Volumetric Clouds Panning Speed")
 	float VolumetricCloudsPanningSpeed = 1.f;
 
