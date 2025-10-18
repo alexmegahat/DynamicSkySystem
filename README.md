@@ -16,7 +16,7 @@
 
 ## About The Project
 
-<strong>Dynamic Sky System is currently in development.</strong> Project contains the ultimate solution for Unreal Engine 5's Dynamic Sky and Weather System in the form of a plugin.
+<strong>Dynamic Sky System is currently in development (2 branches old-main and main).</strong> Project contains the ultimate solution for Unreal Engine 5's Dynamic Sky and Weather System in the form of a plugin.
 
 Dynamic Sky System features a dynamic day-night cycle, 2D and volumetric clouds, immersive snowy weather complete with footprints and intricate snow particles, 
 rainy weather with lifelike raindrops, puddles, and lightning effects.
