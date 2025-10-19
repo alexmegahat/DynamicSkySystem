@@ -21,6 +21,7 @@ ADynamicSky::ADynamicSky()
 
 	SunDirectionalLight = CreateDefaultSubobject<UDirectionalLightComponent>(TEXT("SunDirectionalLight"));
 	SunDirectionalLight->SetupAttachment(GetRootComponent());
+	SunDirectionalLight->SetUseTemperature(true);
 	SunDirectionalLight->SetAtmosphereSunLightIndex(0);
 	SunDirectionalLight->SetForwardShadingPriority(1);
 
@@ -54,6 +55,7 @@ ADynamicSky::ADynamicSky()
 
 	ExponentialHeightFog = CreateDefaultSubobject<UExponentialHeightFogComponent>(TEXT("ExponentialHeightFog"));
 	ExponentialHeightFog->SetupAttachment(GetRootComponent());
+	ExponentialHeightFog->bEnableVolumetricFog = true;
 	
 	
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
