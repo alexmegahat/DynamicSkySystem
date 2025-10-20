@@ -5,6 +5,7 @@
 
 #include <Windows.Media.Audio.h>
 
+#include "NiagaraComponent.h"
 #include "Components/DirectionalLightComponent.h"
 #include "Components/ExponentialHeightFogComponent.h"
 #include "Components/PostProcessComponent.h"
@@ -15,6 +16,8 @@
 // Sets default values
 ADynamicSky::ADynamicSky()
 {
+	RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+	
 	SkySphere = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SkySphere"));
 	SkySphere->SetupAttachment(GetRootComponent());
 	SkySphere->SetRelativeScale3D(FVector(100000.0f, 100000.0f, 100000.0f)); //giant sphere!
@@ -56,6 +59,9 @@ ADynamicSky::ADynamicSky()
 	ExponentialHeightFog = CreateDefaultSubobject<UExponentialHeightFogComponent>(TEXT("ExponentialHeightFog"));
 	ExponentialHeightFog->SetupAttachment(GetRootComponent());
 	ExponentialHeightFog->bEnableVolumetricFog = true;
+
+	NiagaraWeatherEffect = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraWeatherEffects"));
+	NiagaraWeatherEffect->SetupAttachment(GetRootComponent());
 	
 	
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.

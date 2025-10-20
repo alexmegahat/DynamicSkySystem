@@ -29,6 +29,7 @@
 class UPostProcessComponent;
 class USkyAtmosphereComponent;
 class UExponentialHeightFogComponent;
+class UNiagaraComponent;
 
 //--------------------------------------------------
 // DynamicSkySystem Actor class
@@ -94,6 +95,9 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	UExponentialHeightFogComponent* ExponentialHeightFog;
+	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+    UNiagaraComponent* NiagaraWeatherEffect;
 
 	////////////////////////////
 	// Runtime
